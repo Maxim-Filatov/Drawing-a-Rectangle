@@ -10,23 +10,23 @@ start:
 			mov bx, 101h  	 	; video mode 640*480, 256 colors
 			int 10h
 	
-			mov cx, [word ptr x1]
-			mov si, [word ptr x2]
-			mov di, [word ptr y2]
+			mov cx, word ptr [x1]
+			mov si, word ptr [x2]
+			mov di, word ptr [y2]
 
-			mov dx, [word ptr y1]
+			mov dx, word ptr [y1]
 			mov al, 0Eh					; yellow color
 			call drawHorizontalLine
 			
-			mov dx, [word ptr y2]
+			mov dx, word ptr [y2]
 			mov al, 09h					; light blue color
 			call drawHorizontalLine
 	
-			mov dx, [word ptr y1]
+			mov dx, word ptr [y1]
 			mov al, 0Ah					; light green color
 			call drawVerticalLine
 			
-			mov cx, [word ptr x2]
+			mov cx, word ptr [x2]
 			mov al, 0Ch					; light red color
 			call drawVerticalLine
 
