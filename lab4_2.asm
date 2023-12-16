@@ -72,7 +72,7 @@ drawVerticalLine proc near
 			retn
 drawVerticalLine endp
 
-; задание констант (для дальнейшего выполнения этой работы)
+; задание констант
   x1 dw 60
   x2 dw 200
   y1 dw 40
